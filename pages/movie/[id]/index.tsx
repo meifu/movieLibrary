@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
-import { useState } from "react"
-import * as React from "react"
+import { useState } from 'react'
+import * as React from 'react'
 import useSwr from 'swr'
-import { CommentType, MovieType } from "../../../types/movieTypes"
+import { CommentType, MovieType } from '../../../types/movieTypes'
 
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())

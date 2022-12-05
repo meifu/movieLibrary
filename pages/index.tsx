@@ -1,12 +1,13 @@
 import Head from 'next/head'
-import * as React from "react"
-import { useState } from "react"
-import clientPromise from '../lib/mongodb'
+import * as React from 'react'
+import { useState } from 'react'
 import { InferGetServerSidePropsType } from 'next'
-import { MovieType } from "../types/movieTypes";
+
+import clientPromise from '../lib/mongodb'
+import { MovieType } from '../types/movieTypes'
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   try {
     const client = await clientPromise
     const db = client.db('movie_app')
@@ -35,7 +36,7 @@ export async function getServerSideProps() {
 export default function Home({
   isConnected,
   movies,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+}: InferGetServerSidePropsType<typeof getStaticProps>) {
 
   const [filter, setFilter] = useState<string>('')
 
