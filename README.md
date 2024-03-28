@@ -6,7 +6,7 @@ By clicking each movie name, users will be directed to the movie detail page.
 
 Movie detail page: shows details and comments. Users can submit their name and comment.
 
-
+(Note that this was built with an old macbook, so packages versions may be out-dated)
 
 ### How to use
 
@@ -23,7 +23,6 @@ docker run -p 3000:3000 meifu/movielib
 ```
 
 Open the browser and go to http://localhost:3000
-
 
 ### Desgin
 
